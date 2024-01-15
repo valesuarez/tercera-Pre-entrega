@@ -1,0 +1,47 @@
+.navbar{
+    position: sticky;
+    z-index: 3;
+    top: 0s;
+}
+.container-fluid{
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: black;
+}
+.navbar-brand{
+    justify-self: start;
+    margin-left: 20px;
+    color: azure;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.navbar-brand:hover{
+    color: red;
+}
+
+.botonCarrito{
+    font-size: 30px;
+    margin-right: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: black;
+    
+}
+a{
+    text-decoration: none;
+    color: azure;
+    
+}
+a:hover{
+    color: red;
+}
+.botonLogin{
+    font-size: 30px;
+    margin-right: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: black;
+}
