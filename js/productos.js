@@ -1,8 +1,7 @@
-const productosVenta = document.getElementById("productosVenta")
 
 const productos=[
     {id:1,
-    nombre: "                   Samsung Galaxy S22 8gb + 128gb   ",
+    nombre: "                   Samsung Galaxy S22 8gb + 128gb  color verde    ",
     precio: 870999,    
     imagen:"https://http2.mlstatic.com/D_NQ_NP_2X_895723-MLU72854906612_112023-F.webp",
     },
@@ -14,7 +13,7 @@ const productos=[
     },
 
     {id:3,
-    nombre: "             Motorola Razr 40 256gb Gris Mate        ",
+    nombre: "             Motorola Razr 40 256gb Gris Mate + vidrio templado       ",
     precio: 1898550,
     imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_717512-MLA73805462339_012024-F.webp",
     },
@@ -74,23 +73,4 @@ const productos=[
     },
     
 ]
-let carrito =[];
 
-productos.forEach((producto)=>{
-    let tarjetas = document.createElement("div")
-    tarjetas.className = "tarjeta"
-    tarjetas.innerHTML = `
-    <img class="imagenProducto" src="${producto.imagen}">
-    <h3 class="nombreProducto">${producto.nombre}</h3>
-    <p class="precioProducto">$ ${producto.precio}</p>`;
-
-
-    productosVenta.append(tarjetas);
-
-    let btnComprar = document.createElement("button");
-    btnComprar.innerText = "Comprar";
-    btnComprar.className = "btnComprar"
-
-    tarjetas.append(btnComprar);
-
-})

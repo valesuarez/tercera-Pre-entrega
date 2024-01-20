@@ -25,6 +25,9 @@
     color: blue;
     font-size: 22px;
 }
+.idProducto{
+    display: none;
+}
 
 .nombreProducto{
     font-family: 'Times New Roman', Times, serif;
