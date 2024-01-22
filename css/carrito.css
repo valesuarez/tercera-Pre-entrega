@@ -37,29 +37,46 @@
 .listaComprar > .contenidoDelCarrito{
     display: flex;
     flex-direction: row;
-    
     justify-content: space-between;
     align-items: center;
-    width: 95%;
+    width: 98%;
     height: 5rem;
-    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
     background-color: rgb(158, 158, 158);
 }
 
 .imagenProductoCarrito {
     width: 4rem;
     border-radius: 1rem;
+    margin-left: 10px;
 }
 .nombreProductoCarrito{
     font-size:large;
 }
 .precioProductoCarrito{
     font-size: large;
-    margin-left: 5px;
+    margin-right: 10px;
 }
 .totalCarrito{
     font-size: 25px;
-    padding: 20px;
-    text-align: center;
-    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align:left;
+    margin-right: 10px;
+   
+}
+.vaciarCarrito{
+    font-size: 20px;
+    width: 100px;
+    background-color: rgb(245, 0, 0);
+    text-align: center ;
+    color: azure;
+    cursor: pointer;
+    margin: 10px;
+    border: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border-style: solid rgb(112, 110, 110);
 }

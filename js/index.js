@@ -2,7 +2,10 @@ const productosVenta = document.getElementById("productosVenta")
 const verCompra = document.getElementById("verCompra")
 const listasComprar = document.getElementById("listasComprar")
 
+
 let llenar_carrito = JSON.parse(localStorage.getItem('carrito'))|| [];
+
+//----- prudctos a la venta
 
 productos.forEach((producto)=>{
     let tarjetas = document.createElement("div")
@@ -30,10 +33,12 @@ productos.forEach((producto)=>{
             precio : producto.precio
 
             })
-        //console.log(carrito);
+        
     });
 
 });
+
+//---AGREGAR A CARRITO
 
 verCompra.addEventListener("click", ()=>{
     //console.log("funciona")
@@ -45,17 +50,19 @@ verCompra.addEventListener("click", ()=>{
 
      listasComprar.append(listasProductosComprar);
 
-    const listaBtnCerrar = document.createElement ("h1");
+    const listaBtnCerrar = document.createElement ("h2");
     listaBtnCerrar.innerText = "X"
     listaBtnCerrar.className ="cerrarLista"
     
+    
     listaBtnCerrar.addEventListener('click',() =>{
         listasComprar.style.display = "none";
-
     })
-
+    
+    
     listasProductosComprar.append(listaBtnCerrar);
-
+    
+    
     llenar_carrito.forEach((producto) =>{
         
         let contenidoDelCarrito = document.createElement("div")
@@ -64,10 +71,28 @@ verCompra.addEventListener("click", ()=>{
         <img class="imagenProductoCarrito" src="${producto.imagen}">
         <h3 class="nombreProductoCarrito">${producto.nombre}</h3>
         <p class="precioProductoCarrito">$ ${producto.precio}</p>
-        <hr/`;
-``
+        `
+    
         listasComprar.append(contenidoDelCarrito);
+
+        
+        
     })
+    //----VACIAR CARRITO
+    
+    const vaciarCarrito = document.createElement ("div");
+    vaciarCarrito.innerHTML = `<buttom><p>Vaciar Carrito</p></buttom>`
+    vaciarCarrito.innerText =" Vaciar "
+    vaciarCarrito.className = "vaciarCarrito"
+   
+    listasComprar.append(vaciarCarrito);
+
+    vaciarCarrito.addEventListener('click',() =>{
+        console.log("logrado")
+        llenar_carrito = []
+
+    })
+
     const total = llenar_carrito.reduce((acc,el) => acc + el.precio, 0);
 
     const totalCarrito = document.createElement('div')
